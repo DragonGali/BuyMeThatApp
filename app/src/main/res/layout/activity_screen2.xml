@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screen2">
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/charRecyclerView"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <RelativeLayout
+        tools:ignore="MissingConstraints"
+        android:id = "@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom|left"
+        android:layout_marginBottom="5dp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/messageBox"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="362dp"
+            android:layout_height="48dp"
+            android:layout_weight="80"
+            android:background="@drawable/testing_stuff"
+            android:hint="Type a message"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="676dp"
+
+            />
+
+
+        <ImageButton
+            android:id="@+id/CameraButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@id/messageBox"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/camera_icon"
+            android:contentDescription="Take a Picture" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@id/messageBox"
+            android:layout_marginEnd="-49dp"
+            android:background="@drawable/arrow_send"
+            android:contentDescription="send"
+            tools:ignore="MissingConstraints" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
